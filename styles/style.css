@@ -118,7 +118,7 @@
 }
 
 .filter-blur {
-  filter: blur(2px);
+  filter: blur(3px);
 }
 
 .filter-contrast {
@@ -127,10 +127,6 @@
 
 .filter-saturate {
   filter: saturate(200%);
-}
-
-.filter-hue-rotate {
-  filter: hue-rotate(200deg);
 }
 
 .filter-sepia {
@@ -143,6 +139,12 @@
 
 .filter-brightness {
   filter: brightness(70%);
+}
+
+/* Добавил сначала фильтры разными классами, но тесты говорят, что фильтр не множественный */
+
+.filter-hue-rotate-blur-saturate {
+  filter: hue-rotate(200deg) blur(2px) saturate(200%);
 }
 
 .card__image-text {
