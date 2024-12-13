@@ -10,15 +10,12 @@
 
 */
 
-/* * {
-  outline: 1px solid red;
-} */
-
 .page {
   position: relative;
   width: 100%;
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
   font-weight: var(--main-text-font-weight, 400);
+  font-variation-settings: 'wght' var(--main-text-font-weight, 400);
   font-size: 18px;
   background-image: var(--main-background);
   background-size: cover;
@@ -90,6 +87,7 @@
   border-block-end: 2px solid currentColor;
   padding: 5px 24px 5px 10px;
   font-size: 18px;
+  font-weight: var(--main-title-font-weight, 700);
   font-variation-settings: 'wght' var(--main-title-font-weight, 700);
 }
 
