@@ -195,6 +195,7 @@
 .like-icon {
   display: block;
   width: 39px;
+  shape-rendering: crispedges;
 }
 
 .core {
