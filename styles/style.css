@@ -260,45 +260,6 @@
   transition: fill .3s .06s;
 }
 
-.like-icon.is-liked .sparks {
-  animation: opacity .3s .3s ease-in;
-}
-
-.like-icon.is-liked .heart {
-  transform-origin: center;
-  animation: scale .3s .1s ease-in;
-}
-
-@keyframes scale {
-  0% {
-    scale: 1;
-  }
-
-  50% {
-    scale: 1.25;
-
-  }
-
-  100% {
-    scale: 1;
-  }
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 .button {
   position: relative;
   z-index: 0;
