@@ -408,6 +408,7 @@
 
   .main__button {
     flex-direction: column;
+    line-height: 1;
   }
 
   .main__button-image {
