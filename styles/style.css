@@ -12,13 +12,13 @@
 
 .page {
   position: relative;
-  inline-size: 100%;
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
   font-weight: var(--main-text-font-weight, 400);
   font-size: 18px;
   background-image: var(--main-background);
   background-size: cover;
   background-attachment: fixed;
+  inline-size: 100%;
   font-variation-settings: 'wght' var(--main-text-font-weight, 400);
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -36,8 +36,8 @@
 }
 
 .content {
-  inline-size: min(700px, 80%);
   margin-inline: auto;
+  inline-size: min(700px, 80%);
 }
 
 .uppercase {
@@ -59,7 +59,7 @@
   gap: 20px;
   border: 2px solid currentColor;
   padding-block: 128px;
-  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
+  font-family: var(--accent-font), fantasy, Arial, Helvetica, sans-serif;
   text-align: center;
   background-color: var(--main-background-color, #fff);
 }
@@ -103,8 +103,8 @@
 
 .card__image {
   display: block;
-  inline-size: 100%;
   object-fit: cover;
+  inline-size: 100%;
   aspect-ratio: 1 / 1;
 }
 
@@ -115,37 +115,40 @@
 
 .road {
   object-position: center bottom;
-  filter: blur(3px);
 }
 
-.first-victory {
+.filter-blur {
+  filter: blur(2px);
+}
+
+.filter-contrast {
   filter: contrast(120%);
 }
 
-.perfect {
+.filter-saturate {
   filter: saturate(200%);
 }
 
-.communication {
-  filter: hue-rotate(200deg) saturate(150%) blur(2px);
+.filter-hue-rotate {
+  filter: hue-rotate(200deg);
 }
 
-.rock {
+.filter-sepia {
   filter: sepia(70%);
 }
 
-.boo {
+.filter-grayscale {
   filter: grayscale(0.6);
 }
 
-.labyrinth {
+.filter-brightness {
   filter: brightness(70%);
 }
 
 .card__image-text {
   position: absolute;
   opacity: .5;
-  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
+  font-family: var(--accent-font), fantasy, Arial, Helvetica, sans-serif;
   font-size: 14px;
   text-shadow:
     -1px 0 var(--image-text-stroke-color, #fff),
@@ -177,6 +180,7 @@
   display: flex;
   flex-direction: column;
   gap: 27px;
+  line-height: 21px;
 }
 
 .card__buttons {
@@ -202,17 +206,17 @@
 
 .core {
   fill: transparent;
-  transition: fill .3s .03s;
+  transition: fill .3s .03s linear;
 }
 
 .contour {
   fill: var(--heart-icon-contour-color, #000);
-  transition: fill .1s;
+  transition: fill .1s linear;
 }
 
 .main-body {
   fill: transparent;
-  transition: fill .3s;
+  transition: fill .3s linear;
 }
 
 .sparks {
@@ -229,35 +233,37 @@
 
 .card__icon-button:hover .core {
   fill: var(--heart-icon-contour-color, #000);
-  transition: fill .3s;
+  transition: fill .3s linear;
 }
 
 .card__icon-button:hover .main-body {
   fill: var(--heart-icon-contour-color, #000);
-  transition: fill .3s .05s;
+  transition: fill .3s .05s linear;
 }
 
 .card__icon-button:active .core {
   fill: var(--heart-icon-main-body-color, #ff0000);
-  transition: fill .3s;
+  transition: fill .3s linear;
 }
 
 .card__icon-button:active .main-body {
   fill: var(--heart-icon-main-body-color, #ff0000);
-  transition: fill .3s .05s;
+  transition: fill .3s .05s linear;
 }
 
 .like-icon.is-liked .core {
   fill: var(--heart-icon-main-body-color, #ff0000);
+  transition: fill .3s linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--heart-icon-main-body-color, #ff0000);
+  transition: fill .3s .05s linear;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--heart-icon-main-body-color, #ff0000);
-  transition: fill .3s .06s;
+  transition: fill .3s .06s linear;
 }
 
 .button {
@@ -265,7 +271,7 @@
   z-index: 0;
   border: 2px solid #000;
   overflow: hidden;
-  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
+  font-family: var(--accent-font), fantasy, Arial, Helvetica, sans-serif;
   font-size: 14px;
   background-color: var(--main-background-color, #fff);
   transition: box-shadow .2s;
@@ -296,9 +302,9 @@
 }
 
 .card__like-button {
-  inline-size: 130px;
   padding: 10px 0;
   line-height: .9;
+  inline-size: 130px;
 }
 
 .main__button {
@@ -310,8 +316,8 @@
 }
 
 .main__button-image {
-  inline-size: 21px;
   color: var(--button-text-color, #fff);
+  inline-size: 21px;
   mix-blend-mode: difference;
 }
 
@@ -324,12 +330,12 @@
   display: grid;
   grid-template-columns: 39px 1fr;
   gap: 30px 20px;
-  inline-size: min(356px, 91%);
   margin: auto;
   border-width: 2px;
   padding: 28px 30px;
-  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
+  font-family: var(--accent-font), fantasy, Arial, Helvetica, sans-serif;
   font-size: 14px;
+  inline-size: min(356px, 91%);
 }
 
 .dialog::backdrop {
