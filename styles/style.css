@@ -12,7 +12,7 @@
 
 .page {
   position: relative;
-  width: 100%;
+  inline-size: 100%;
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
   font-weight: var(--main-text-font-weight, 400);
   font-size: 18px;
@@ -36,7 +36,7 @@
 }
 
 .content {
-  width: min(700px, 80%);
+  inline-size: min(700px, 80%);
   margin-inline: auto;
 }
 
@@ -103,7 +103,7 @@
 
 .card__image {
   display: block;
-  width: 100%;
+  inline-size: 100%;
   object-fit: cover;
   aspect-ratio: 1 / 1;
 }
@@ -196,7 +196,7 @@
 
 .like-icon {
   display: block;
-  width: 39px;
+  inline-size: 39px;
   shape-rendering: crispedges;
 }
 
@@ -296,7 +296,7 @@
 }
 
 .card__like-button {
-  width: 130px;
+  inline-size: 130px;
   padding: 10px 0;
   line-height: .9;
 }
@@ -310,7 +310,7 @@
 }
 
 .main__button-image {
-  width: 21px;
+  inline-size: 21px;
   color: var(--button-text-color, #fff);
   mix-blend-mode: difference;
 }
@@ -324,7 +324,7 @@
   display: grid;
   grid-template-columns: 39px 1fr;
   gap: 30px 20px;
-  width: min(356px, 91%);
+  inline-size: min(356px, 91%);
   margin: auto;
   border-width: 2px;
   padding: 28px 30px;
@@ -356,7 +356,7 @@
 
 @media (width < 600px) {
   .content {
-    width: 100%;
+    inline-size: 100%;
   }
 
   .header__container {
@@ -374,7 +374,7 @@
   }
 
   .main__button-image {
-    width: 28px;
+    inline-size: 28px;
   }
 
   .dialog[open] {
