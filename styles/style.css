@@ -157,10 +157,11 @@
   mix-blend-mode: hard-light;
 }
 
-@supports(-webkit-text-stroke: 1px #000000) {
+@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .card__image-text {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--image-text-stroke-color, #fff);
+    text-stroke: 1px var(--image-text-stroke-color, #fff);
   }
 }
 
