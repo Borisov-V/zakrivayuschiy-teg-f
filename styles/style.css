@@ -24,6 +24,10 @@
   min-block-size: 100dvb;
 }
 
+/*
+  В .page без директивы @supports добавил свойство font-variation-settings, т.к. тесты ругаются на его отсутствие.
+*/
+
 @supports (font-variation-settings: normal) {
   .page {
     font-family: var(--main-font-variable), Arial, Helvetica, sans-serif;
